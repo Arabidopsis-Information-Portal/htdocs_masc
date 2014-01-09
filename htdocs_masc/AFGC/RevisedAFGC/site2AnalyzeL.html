@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<TITLE><H1>Things to be Considered When Analyzing AFGC Microarray Data</H1></TITLE>
+<BODY>
+<META NAME="Template" CONTENT="S:\Program Files\Microsoft Office\Office\html.dot">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+
+<B><FONT SIZE=4><P>Things to be Considered When Analyzing AFGC Microarray Data</B></font><P>
+<B><font color=red>Updated August 1, 2002.</font></B>
+<P>1. Be sure to read the AFGC User Guide<a href=SMDguide> The Stanford
+Microarray Database(SMD)</a> and see the SMD Tutorial at the <a
+href="http://genome-www5.stanford.edu/MicroArray/SMD/helpindex.html">SMD
+HELP </a>page..
+
+<P>2. Evaluate the data set by viewing the data using the tools under the DISPLAY DATA/VIEW page at SMD. 
+
+<ul>Several utilities are available for evaluating the general quality of
+  a data set in SMD - "Data Distribution", "Plot Data", "Ratios on
+  Arrays", "Channel Intensities", and "Compare log2(RAT2N) with experiment
+  from the same print".  See the SMD Tutorial at the <a
+  href="http://genome-www5.stanford.edu/MicroArray/SMD/helpindex.html">SMD
+  HELP</a> page for a discussion of how to use these tools. In addition,
+  the rationale for creating the "Ratios on Arrays" utility and its
+  application to AFGC data sets is described in the AFGC User Guide <a href="http://afgc.stanford.edu/RevisedAFGC/sector_bias2L.htm">Sector Bias</a>.</ul> 
+
+<p>3. Clones corresponding to spots with intensities of at least 350 in both channels and ratios of 2.0 / 0.5 are worth further investigation. </P><DIR>
+
+<P>Higher intensities and more extreme ratios will increase confidence
+  that it is the result of a biological response. However, actual
+  confidence intervals vary by experiment. Even if no ratio is higher than
+  2.0 or lower than 0.5, the highest and lowest ratios are worth further
+  investigation. The log <SUB>2</SUB> (ratio) of a given experiment tend
+  to follow an approximate normal distribution. In the case of a given
+  experiment with less extreme intensity values, an arbitrary cut off of
+  2.0/0.5 can be replaced by a log <SUB>2</SUB> (ratio) value equal to two
+  standard deviations from the mean. In addition, because a very large number of genes are being assayed on the microarrays, there is always the possibility that a ratio greater or lower than the cut off will arise by chance for a gene that does not in fact show a change in gene expression. Especially for experiments that are not repeated from independent biological materials, it is important to verify changes in gene expression by an independent measurement for genes of interest. </P></DIR>
+<P>4. For genes of interest, check that the spot(s) is acceptable. </P><DIR>
+<P>- <I>Check the spot visually for the absence of any irregularities (see SPOT DATA page in SMD).</P>
+</I><P>- <I>Check whether the spot has been flagged as bad by the AFGC
+  staff (see: </I><a href="http://afgc.stanford.edu/RevisedAFGC/FlagL.htm">Guide to Flagging Spots</a><I> at the AFGC web site).</P>
+</I><P>- <I>Check whether the DNA used to print the spot has been sequenced by the AFGC staff. If not, we recommend that you obtain the EST clone from the Arabidopsis Biological Resource Center and sequence it.</P><DIR>
+
+</I><P>&#9;&#9;Because the template DNAs used by the AFGC staff were the
+  same DNAs prepared at Michigan State University for the EST sequencing
+  project (Newman et al. 1994), we feel that the opportunity for mix-ups
+  in the DNA samples is minimal. However, in preliminary sequencing of
+  AFGC clones, approximately 1% of the clones were incorrect.
+  In addition, several examples of chimeric DNA clones were identified (See
+ <a href="http://afgc.stanford.edu/RevisedAFGC/SequenceVerL.htm">Sequence Verification</a>). </P></DIR>
+
+<P>-<I>Check whether the PCR that generated the DNA used in printing the spot was scored as bad by checking the "Failed" code in SMD.</P></I>
+
+<ul>All the PCR reactions were evaluated on gels for double bands,
+  multiple bands, smears and the absence of  bands. A successful PCR that
+  gave rise to a single, strong band is scored as "0". </ul></DIR>
+  <P>5. Check your gene for the presence of closely related gene family members in the Arabidopsis genome. This may indicate whether there is the potential for cross-hybridization of other gene family members to the EST DNA spotted on the AFGC microarrays. 
+
+ <ul> At present, the degree of cross_hybridization associated with each EST clone is difficult to evaluate because the complete sequence for the clone is unknown. Generally, only ~400 nt of sequence from the 5'-end of the cDNA is available (Newman et al. 1994). Sequences that are more than ~80% identical over a  contiguous segment of 100 or more nt are likely to show some degree of  cross-hybridization. Thus, the intensity signal associated with any given spot on the array may be a composite of signals of varying degrees of cross-hybridization from related gene family members. (See Girke et al. 2000. Microarray analysis of developing Arabidopsis seeds. Plant Physiology 124:1570-1581). </ul></P></DIR>
+</DIR>
+
+<P>6. Check for consistency among replicate values. </P>
+
+<ul>A variety of parameters in the microarray technology, from the selection of biological materials to the hybridization and scanning parameters, may lead to false  negative or false positive results. Increased numbers of replications will give you added confidence that any changes in gene expression that you observe are accurate. (See: Tusher et al. 2001. Significance analysis of microarrays applied to the ionizing radiation response. Proc. Natl. Acad. Sci., USA 98:5116-5121)</ul>
+
+<P>7. Validate important results obtained from the microarray data by an independent test or method.</P>
+
+<ul>For example, if you identify a gene with elevated levels of
+transcript under a specific experimental regime, obtain the EST clone from
+the<a href="http://aims.cps.msu.edu/aims/"> Arabidopsis Biological Resource Center</a> and verify your results by northern blotting or quantitative RT-PCR.</P></DIR></ul>
+
+<P>8. Ensure that "control" plants are treated identically to "treated" plants. </P>
+
+<ul>The DNA microarray technology is highly sensitive to changes in the state or condition of your plant material. With the Y2000 AFGC arrays, ~7,500 genes are assayed per experiment. Thus, subtle differences in the growing conditions or harvest conditions of the "control" and "treated" plants may confound the treatment-related differences that you are trying to characterize. One example is  the time of day at which the samples are harvested. A large number of genes  exhibit strong diurnal changes in gene expression. Thus, the "control" and  "treated" plants must be harvested at the same time of the day to avoid identifying   diurnally cycling genes. If you are able to perform no or only a small number of  replications of a microarray experiment, then if possible, we recommend that you pool plant material from several replicates to prepare the RNA samples that will be used for the microarray analysis. In this way, the contribution of small  unintended differences in growth conditions will be minimized. </ul></DIR>
+
+<I><P>Damares C Monte</P>
+<P>Ellen Wismann</I></P>
+
+
+</body>
+</html>

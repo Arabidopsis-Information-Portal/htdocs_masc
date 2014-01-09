@@ -1,0 +1,20 @@
+<h2><center>REFORMAT AFGC MICROARRAY DATA</center></h2>
+
+<br><font color=red>Updated Aug. 1, 2002.</font>
+
+<P>Carolyn Schultz has developed a utility for reformatting AFGC data so that ratio values for selected genes can be readily compared across multiple experiments. 
+
+
+<P>To Obtain the Reformatting Program
+
+<P>The program developed by Carolyn and the arraystart.txt file can be downloaded <a href ="http://www.adelaide.edu.au/sciences/plant/research/biochem_groups/cs_bioinformatics.html">here</a>.
+
+
+<P>Brief Description of Program
+
+<P>A Perl script, ma_analysis.pl, was written to reformat the AFGC microarray data into a format where the ratio data for ALL of the AFGC experiments and as many genes as desired can be viewed in a single spreadsheet. Input1 for this program is a tab delimited spreadsheet, "arraystart.txt", that contains the category of each experiment as defined by AFGC (column 1), the experiment ID (column 2), and a description of each experiment re-written to make it more clear what is being compared (column 3). "Test" and "reciprocal" experiments (where present) are on consecutive rows, with unrelated experiments separated by a blank row. In all cases the experimental details are based on the Channel 2 (red) to Channel 1 (green) description found in the "view" option from the "advanced search page" on the AFGC web site (January, 2002). In some cases, e.g. leaves to flowers (Expt ID, 2370), this information is not consistent with the experiment name "flowers leaves". The microarray data for each gene is downloaded from the AFGC web site and saved onto the local machine as a tab delimited file (.txt). The filename given to the data for each gene must be in a precise format as this information provides the column heading information in the final spreadsheet containing all the genes. The format is GeneName_CloneorGenBankID_Date, with an underscore "_" separating the components, for example AGP4_T41664_28.11.01. The underscore character cannot be used as part of "GeneName", "CloneorGenBankID" or "Date". 
+
+<P>The filenames of each file containing the microarray data are placed in another file, one filename per line and in the order that the columns should appear in the final spreadsheet. This list file is saved as a text only file (e.g. datafile.txt). To run the program on either a Unix or Windows based computer, go to the command line and type Perl ma_analysis.pl arraystart.txt datafile.txt >arrayout.txt. The command line places the output into the file arrayout.txt in tab delimited format and is suitable for exporting into various computer applications including Microsoft Excel&#174;.
+<P>As new experiments are released, they can be manually entered into the arraystart.txt file following the established format and the updated data files downloaded again from the AFGC web site.
+
+<P><font size=3>This utility along with examples of its use is described in more detailed in the paper: Schultz et al. 2002. Using genomic resources to guide research directions: The arabinogalactan-protein gene family as a test case.(Plant Physiol. 2002 Aug;129(4):1448-63)</font>

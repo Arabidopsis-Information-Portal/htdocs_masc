@@ -1,0 +1,130 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 5">
+		<title>Search Arabidopsis EST List</title>
+		<style media="screen" type="text/css"><!--
+H1 { color: blue; font-style: normal; font-weight: 300; font-size: 24px; font-family: Verdana, Textile, "Times New Roman"; text-decoration: none; text-align: center; text-indent: 10px }
+P  { color: black; font-size: 12px; font-family: Verdana, Textile, "Times New Roman" }
+TD  { color: black; font-size: 12px; font-family: Verdana, Textile, "Times New Roman" }
+INPUT { color: black; font-size: 14px; font-family: Verdana, Textile, "Times New Roman"; text-align: left }
+LI { font-size: 12px; font-family: Verdana, Textile, "Times New Roman" }
+--></style>
+	</head>
+
+	<body bgcolor="#ffffff">
+		<h1>Search Arabidopsis thaliana DNA Sequences</h1>
+                <FONT COLOR="red">
+                <center> 
+                <h5>This program doesn't work with some versions of Netscape. Use Internet Explorer or Netscape 6.2. </h5> 
+                </center>
+<center> 
+                <h4><font color =red>Updated August 1,
+2002.</font></center>
+<p><align=center>This program was created by Todd Richmond.<p>For the most
+up-to-date annotation of a given EST sequence from the AFGC arrays, please
+check the CLONE SEARCH page at<a href="/"> TAIR
+</a>or BLAST the sequence against GenBank or the databses at TAIR or
+TIGR.</h4>
+<p><b><font color=red>Note: TAIR is developing a parallel resource to the
+AFGC Clone List. Please check the TAIR news page for information about
+this development (August 1, 2002).</B></font> 
+                
+                
+		<p>This page offers access to information for 123,000+
+Arabidopsis DNA sequences (all Arabidopsis sequences less than 20,000 bp
+that are not genome survey sequences). Enter search criteria into one or
+more of the following categories and press 'Submit Query' to search.
+Entering terms into more than one box will search for sequences that match
+all of the criteria. The information returned will include GenBank
+accession number, clone id, GID, definition lines, putative function as
+assigned by TIGR, and TIGR's BAC and chromosome locus (as determined by
+DNA sequence similarity). Match length, percent identity and availibility
+of microarray data from the Stanford Microarray Database are also
+given. For those ESTs represented on the AFGC microarrays, the <img
+src="../images/spot.jpg" align=middle> icon will take you to the SPOT HISTORY page and the <img src="../images/clusterLogo1.jpg" align=middle> icon will take you to the EXPRESSION VIEWER page. From the results page, you can find all sequences that belong to the same BAC locus/chromosomal locus or genome region.</p>
+		<form action="http://cellwall.stanford.edu/cgi-bin/query_EST_list.pl" method="get" name="QueryESTListForm" target="_blank" enctype="application/x-www-form-urlencoded">
+			<table border="0" cellpadding="2" cellspacing="1" width="634">
+				<tr>
+					<td width="200"><input type="text" name="clone_id" size="25" tabindex="1"></td>
+					<td width="415"><b>CloneID </b>(i.e. H10C11T7, 600040331R1)</td>
+				</tr>
+				<tr>
+					<td width="200"><input type="text" name="accession" size="25" tabindex="2"></td>
+					<td width="415"><b>Accession </b>
+						(i.e. AA042439, Z18792, T04072)</td>
+				</tr>
+				<tr>
+					<td width="200"><input type="text" name="gi" size="25" tabindex="3"></td>
+					<td width="415"><b>GID </b>
+						(i.e. 8720447, g2446148)</td>
+				</tr>
+				<tr>
+					<td width="200"><input type="text" name="bac_locus" size="25" tabindex="4"></td>
+					<td width="415"><b>TIGR BAC Locus </b>(i.e. F2K13_60)</td>
+				</tr>
+				<tr>
+					<td width="200"><input type="text" name="chr_locus" size="25" tabindex="5"></td>
+					<td width="415"><b>TIGR Chromosome Locus </b>
+						(i.e. At5g16910)</td>
+				</tr>
+				<tr>
+					<td width="200"><input type="text" name="description" size="25" tabindex="6"></td>
+					<td width="415"><b>Function </b>
+						(i.e. cellulose synthase, kinase, syntaxin)</td>
+				</tr>
+				<tr>
+					<td width="200"><input type="text" name="definition" size="25" tabindex="7"></td>
+					<td width="415"><b>GenBank Definition Line </b>(i.e. terms from &quot;BG459617 M78N08STM Arabidopsis developing seed Arabidopsis thaliana cDNA clone 600040331R1 5', mRNA sequence&quot;)</td>
+				</tr>
+				<tr>
+					<td width="200"><input type="reset"><input type="submit" name="submitButtonName"></td>
+					<td width="415"></td>
+				</tr>
+			</table>
+		</form>
+		<h2>Search hints</h2>
+		<ul>
+			<li>Search for multiple items within each category by separating search terms with a space. 
+			<li>Searches for GenBank Definition Line and Function support partial word matches. A search for &quot;pyruvate&quot; will match &quot;phosphoenolypyruvate carboxylase&quot;, &quot;beta-alanine-pyruvate aminotransferase&quot;, &quot;hydroxypyruvate reductase&quot; (and about 600 other ESTs). If you get too many hits, try being more specific.
+			<li>Searches are case-insensitive.
+			<li>Searches for CloneID, Accession, GID, BAC Locus or Chromosome Locus will be faster than searches for GenBank Definition Line or Function.
+			<li>Defining what constitutes a CloneID can be tricky. If a search on CloneID fails, try searching the GenBank Definition Line with the same search term.
+			<li>Searches for common terms (i.e. kinase) or for genes that may have a lot of ESTs (i.e. rubisco) may produce large result sets. Be patient as it may take a minute or two to find and load all of the data.
+			<li>Use common sense when specifying multiple criteria. Specifying an Accession for one EST and a GID for another EST will return no information for either EST.
+
+		</ul>
+		<h2>Details of Sequence Similarity Searches</h2>
+		<p>Similarity searches were done using SSAHA2 software (Sequence Search and Alignment by Hashing Algorithm; <a href="http://www.sanger.ac.uk/Software/analysis/SSAHA/" target="_blank">available from the Sanger Centre</a>). This software does very rapid searches for nearly identical matches. A comparison of 113,000 sequences against the entire Arabidopsis genome takes approximately 40 minutes on a Dell PowerEdge server running RedHat Linux 2.2. The following parameters were used:</p>
+		<table border="1" cellpadding="0" cellspacing="2" width="620">
+			<tr>
+				<td width="150">-maxGap  5</td>
+				<td>Maximum gap allowed between successive hits for them to count as part of the same match.  </td>
+			</tr>
+			<tr>
+				<td width="150">-maxInsert 5</td>
+				<td>Maximum number of insertions/deletions allowed between successive hits for them to count as part of the same match.</td>
+			</tr>
+			<tr>
+				<td width="150">-wordLength 10 </td>
+				<td>Size in base pairs of the words used to form the hash table.</td>
+			</tr>
+			<tr>
+				<td width="150">-minPrint 50</td>
+				<td>The minimum number of matching bases or residues that must be found in the query and subject sequences before they are considered as a match and thus printed.</td>
+			</tr>
+			<tr>
+				<td width="150">-sortMatches 1</td>
+				<td>Output only the top n matches for each query, sorted by number of matching bases, then by subject name, then by start position in the query sequence.</td>
+			</tr>
+			<tr>
+				<td width="150">-parserFriendly        </td>
+				<td>(a.k.a. perlFriendly) Show one match per line as a set of tab delimited fields</td>
+			</tr>
+		</table>
+		<p>The output of SSAHA2 was compared to the list of sequence features extracted from TIGR's XML annotation files of the Arabidopsis genome and used to assign a TIGR feature to each sequence (if possible). The minimum criteria is a match of 50 basepairs with 90+% identity. For the most part, most matches are 100% due to the parameters set above. Be cautious, however, when using short matches to decide that an EST belongs to any one particular gene. When a match to a TIGR feature was not found, the interval into which it fell was recorded. If your sequence of interest falls into one of these intervals, you can initiate a search to find other sequences that fall into that same interval. Since some of these regions are quite large, there is no guarantee that all sequence in the same unannotated region belong to the same coding sequence.</p>
+		<p>Four passes were made through the sequences to determine sequence similarity. First, 123,527 Arabidopsis sequences were compared to the entire genome. Arabidopsis sequences less than 50 basepairs in length and GSS sequences were ignored. Those without good matches were then compared to the Arabidopsis chloroplast and mitochondrial genomes (697 sequences). Then against vector sequences from GenBank (38 sequences) and finally human mRNA (18 sequences). That left 5554 sequences with no sequence similarity information. Using a slower, but more forgiving BLASTN search, several thousand of these sequences were assigned positions. A total of 2379 of the original 123,527 sequences (1.9%) have no match to the completed genome using the criteria above. Of the remaining 98%, 19,582 sequences (16%) have questionable matches - they have match lengths less than 100 basepairs, or sequence identity less than 95%. </p>
+	</body>
+
+</html>

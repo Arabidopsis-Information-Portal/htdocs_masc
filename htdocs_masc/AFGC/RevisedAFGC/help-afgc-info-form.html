@@ -1,0 +1,14 @@
+#!/usr/local/bin/perl -w
+
+use lib "/opt/apache/cgi-bin/lib";
+use AFGCInformationForm;
+use lib "/usr/local/lib/perl";
+use CGI qw( :standard :html3 );
+use CGI::Pretty qw( :html3 );
+
+my( $cgi ) = new CGI();
+my( $form ) = new AFGCInformationForm( $cgi );
+
+$form->startHelpPage();
+$form->helpForm();
+$form->endPage();
